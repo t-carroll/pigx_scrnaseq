@@ -99,8 +99,8 @@ if __name__ == '__main__':
         print('Features ...')
         path_genes    = os.path.join(path_input,'features.tsv')
         genes         = pd.read_csv(path_genes, sep='\t', header=None)
-        genes.columns = ['gene_id','gene_id2']
-        genes         = genes.drop(columns = ['gene_id2'])
+        genes.columns = ['gene_id','gene_id2','gene_expression']
+        genes         = genes.drop(columns = ['gene_id2','gene_expression'])
 
         print('Barcode ...')
         path_barcode       = os.path.join(path_input,'barcodes.tsv')
